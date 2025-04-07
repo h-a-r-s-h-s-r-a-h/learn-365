@@ -5,12 +5,11 @@ import {
   mplTokenMetadata,
 } from "@metaplex-foundation/mpl-token-metadata";
 import {
-  airdropIfRequired,
   getExplorerLink,
   getKeypairFromEnvironment,
 } from "@solana-developers/helpers";
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
-import { Connection, LAMPORTS_PER_SOL, clusterApiUrl } from "@solana/web3.js";
+import { Connection, clusterApiUrl } from "@solana/web3.js";
 import {
   generateSigner,
   keypairIdentity,
