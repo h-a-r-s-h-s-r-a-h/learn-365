@@ -20,7 +20,8 @@ public class ServerApplication {
         return runner -> {
 //            createInstructor(appDAO);
 //            createAnotherInstructor(appDAO);
-            findInstructor(appDAO);
+//            findInstructor(appDAO);
+            deleteInstructor(appDAO);
         };
     }
 
@@ -52,6 +53,20 @@ public class ServerApplication {
     }
 
     private void findInstructor(AppDAO appDAO) {
+        int theId = 1;
+        System.out.println("Finding the id: " + theId);
+
+        Instructor tempInstructor = appDAO.findInstructorByid(theId);
+        System.out.println("Instructor: " + tempInstructor);
+        System.out.println("Associated Instructor Detail: " + tempInstructor.getInstructorDetail());
+    }
+
+    private void deleteInstructor(AppDAO appDAO) {
+        int theId = 1;
+        System.out.println("Deleting the instructor: " + appDAO.findInstructorByid(theId));
+
+        appDAO.deleteInstructorById(theId);
+        System.out.println("Done!");
     }
 
 }
